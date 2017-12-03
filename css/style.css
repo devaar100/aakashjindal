@@ -1,0 +1,109 @@
+html,body{
+    height: 100%;
+}
+
+.circle {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: -1;
+}
+
+.circle-dark{
+    opacity: 0.3;
+    border: 20px solid black;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(8);
+    }
+}
+
+.one{
+    animation: grow 8s infinite;
+}
+.two{
+    animation: grow 6s infinite;
+}
+.three{
+    animation: grow 4s infinite;
+}
+
+.custom-size{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-fade .carousel-item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+}
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+.ticker{
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    top: 45%;
+}
+
+.h-text{
+    font-size: 100px;
+    color: white;
+}
+#first-text{
+    animation: move 10s infinite;
+}
+
+@keyframes move {
+    0%{
+        margin-top: 0;
+    }
+    10%{
+        margin-top: 0;
+    }
+    20%{
+        margin-top: -120px;
+    }
+    30%{
+        margin-top: -120px;
+    }
+    40%{
+        margin-top: -240px;
+    }
+    50%{
+        margin-top: -240px;
+    }
+    60%{
+        margin-top: -360px;
+    }
+    70%{
+        margin-top: -360px;
+    }
+    80%{
+        margin-top: -480px;
+    }
+    90%{
+        margin-top: -480px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}

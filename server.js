@@ -7,11 +7,7 @@ const path = require('path');
 
 const app = express();
 
-//app.use('/',express.static(path.join(__dirname,'public_static')));
-
-app.get('/',(req,res,next)=>{
-    res.send("Hello");
-});
+app.use('/',express.static(path.join(__dirname,'public_static')));
 
 process.env.PORT = process.env.PORT || 1234;
 

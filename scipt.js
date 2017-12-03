@@ -9,6 +9,8 @@ const app = express();
 
 app.use('/',express.static(path.join(process.env.PWD,'public_static')));
 
-app.listen(process.env.PORT,function () {
-    console.log("Listening on "+process.env.PORT);
+port = process.env.PORT | 1234;
+
+app.listen(port,function () {
+    console.log("Listening on http://localhost:"+port);
 });

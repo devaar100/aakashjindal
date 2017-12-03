@@ -13,7 +13,7 @@ app.get('/',(req,res,next)=>{
     res.send("Hello");
 });
 
-process.env.PORT = process.env.PORT | 1234;
+process.env.PORT = process.env.PORT || 1234;
 
 app.listen(process.env.PORT,function () {
     console.log(`Server started on http://localhost:${process.env.PORT}`);

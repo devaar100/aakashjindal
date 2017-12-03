@@ -7,10 +7,14 @@ const path = require('path');
 
 const app = express();
 
-app.use('/',express.static(path.join(__dirname,'public_static')));
+//app.use('/',express.static(path.join(__dirname,'public_static')));
 
-port = process.env.PORT | 1234;
+app.get('/',(req,res,next)=>{
+    res.send("Hello");
+});
 
-app.listen(port,function () {
-    console.log("Listening on http://localhost:"+port);
+process.env.PORT = process.env.PORT | 1234;
+
+app.listen(process.env.PORT,function () {
+    console.log(`Server started on http://localhost:${process.env.PORT}`);
 });
